@@ -3,11 +3,9 @@
     "name": "Tabsanity",
     "version": "1.0",
     "description": "Decend into insanity as your tabs being to go crazy. But is it the tabs, or you?",
-    "permissions": ["tabs", "activeTab", "storage"],
-    "host_permissions": ["<all_urls>"],
-    "background": {
-        "service_worker": "background.js"
-    },
+    "permissions": ["tabs", "activeTab", "storage", "scripting"],
+    "host_permissions": [
+        "http://*/*", "https://*/*"],
 
     "action": {
         "default_popup": "popupUI.html",
