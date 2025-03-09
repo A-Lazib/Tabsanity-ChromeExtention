@@ -1,1 +1,38 @@
- 
+{
+    "manifest_version": 3, 
+    "name": "Tabsanity",
+    "version": "1.0",
+    "description": "Decend into insanity as your tabs being to go crazy. But is it the tabs, or you?",
+    "permissions": ["tabs", "activeTab", "storage"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "action": {
+        "default_popup": "popupUI.html",
+        "default_icon": {
+           "16": "icon-16.png", 
+           "48": "icon-48.png",
+           "128": "icon-128.png"
+        }
+
+    },
+    "icons": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+        },
+
+    "content_scripts": [
+        {
+            "matches": ["https://*/*", "http://*/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
+
+
+
+
+

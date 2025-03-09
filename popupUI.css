@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    background-color: #3a3232;
+    color: #fff;
+  }
+  .popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px; /* Adjust as needed */
+    background-color: #3a3232;
+    padding: 10px;
+    transition: max-height 1.5s ease-in-out;
+    overflow: hidden; 
+    min-height: 80px;
+  }
+  
+  /* Default height when dropdown is hidden */
+  .popup.collapsed {
+    height: 80px; /* Adjust to match the height without dropdown */
+  }
+  
+  /* Expanded height when dropdown appears */
+  .popup.expanded {
+    height: 220px; /* Adjust to match height with dropdown */
+  }
+  
+  .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+  }
+  /* Dropdown Button */
+  #dropdownButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #dropdownButton:hover {
+    background-color: darkred;
+  }
+ /* Dropdown content - hidden by default */
+ .dropdown-content {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    visibility: hidden;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -20px); /* Centers horizontally */
+    width: max-content; /* Ensures it fits content width */
+    min-width: 100%; /* Prevents shrinking */
+    background-color: #3a3232;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Show dropdown - smoothly slides down */
+  .show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Moves back to normal */
+    visibility: visible;
+  }
+  
+  .dropdown-content button {
+      background-color: red;
+      color: white;
+      border-style: groove;
+      border-width: 0.1cm;
+      border-color: #ffffff #000000 #000000 #ffffff; /* Top-Right-Bottom-Left */
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      display: block;
+      text-align: left;
+  }
+
+  .dropdown-content button:hover {
+    background-color: darkred;
+  }
+
